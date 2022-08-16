@@ -19,7 +19,12 @@ Then, you need to download the source code:
 ```
 git clone https://github.com/ceres-solver/ceres-solver.git
 ```
-Afer that, enter the coresponding ceres folder `cd ceres-solver` and execute the following code in turn:
+Afer that, enter the coresponding folder "ceres-solver" and choose the version 1.14.0.
+```
+cd ceres-solver
+git checkout tags/1.14.0
+```
+Then, execute the following code in turn to compile and install ceres:
 ```
 mkdir build
 cd build
