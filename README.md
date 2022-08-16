@@ -5,7 +5,9 @@ If you follow me step by step, you can compile the program "hmpl" from Dr YuZhan
 
 # Start
 First of all, you need to install UBUNTU18.04 on your computer.
+
 Then we need to install serval libraries to our linux environment, e.g. ceres, nlopt, snopt, ipopt, cppad, libcpp, grid map, geographic, gtest and others. Now I'm going to show you how to install them all.
+
 Most the sources code is given in this repository, but I recommend you to down load it on the official website or `git clone` them from their original repository. Please try to follow my step exactly by `git clone`, and if you have trouble with you internet, you can obtain the source code by other ways.
 
 # ceres
