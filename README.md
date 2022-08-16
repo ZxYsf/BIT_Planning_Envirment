@@ -29,5 +29,6 @@ make test
 sudo make install
 ```
 
-Illustration: for the code above `make -j8`, 8 is the thread of your CPU.
+Illustration: for the code above `make -j8`, 8 is the thread of your CPU. You can use `make -j12` and so on, or just `make -j`.
+
 So far, ceres is installed on your computer.
