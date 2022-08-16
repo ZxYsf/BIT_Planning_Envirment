@@ -17,12 +17,13 @@ sudo apt install libsuitesparse-dev libcxsparse3 libgflags-dev libgoogle-glog-de
 ```
 Then, you need to download the source code:
 ```
+cd ~/Download
 git clone https://github.com/ceres-solver/ceres-solver.git
 ```
 Afer that, enter the coresponding folder "ceres-solver" and choose the version 1.14.0.
 ```
 cd ceres-solver
-git checkout tags/1.14.0
+git checkout -b 11.4.0
 ```
 Then, execute the following code in turn to compile and install ceres:
 ```
@@ -30,7 +31,6 @@ mkdir build
 cd build
 cmake ..        
 make -j8
-make test
 sudo make install
 ```
 
