@@ -10,9 +10,13 @@ Most the sources code is given in this repository, but I recommend you to down l
 
 # ceres
 Firstly, you need to install dependencies of ceres:
-`sudo apt install libsuitesparse-dev libcxsparse3 libgflags-dev libgoogle-glog-dev libgtest-dev`
+```
+sudo apt install libsuitesparse-dev libcxsparse3 libgflags-dev libgoogle-glog-dev libgtest-dev
+```
 Then, you need to download the source code:
-`git clone https://github.com/ceres-solver/ceres-solver.git`
+```
+git clone https://github.com/ceres-solver/ceres-solver.git
+```
 Afer that, enter the coresponding ceres folder `cd ceres-solver` and execute the following code in turn:
 ```
 mkdir build
