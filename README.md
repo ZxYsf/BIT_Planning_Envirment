@@ -6,7 +6,7 @@ If you follow me step by step, you can compile the program "hmpl" from Dr YuZhan
 # Start
 Above all, you need to install UBUNTU18.04 on your computer and install servel necessary tool like `cmake`, `g++`, `git`. You can just use `sudo apt-get install XXX` to configure the basic tools.
 
-Then we need to install serval libraries to our linux environment, e.g. ceres, nlopt, snopt, ipopt, cppad, libcpp, grid map, geographic, gtest and others. Now I'm going to show you how to install them all. In this tutorial I will download all the source code in `~/Download`, you can unload it after the whole installation procedure.
+Then we need to install serval libraries to our linux environment, e.g. ceres, nlopt, snopt, ipopt, cppad, libcpp, grid map, geographic, gtest and others. Now I'm going to show you how to install them all. In this tutorial I will download all the source code in `~/Downloads`, you can unload it after the whole installation procedure.
 
 Most the sources code is given in this repository, but I recommend you to down load it on the official website or `git clone` them from their original repository. Please try to follow my step exactly by `git clone`, and if you have trouble with you internet, you can obtain the source code by other ways.
 
@@ -17,7 +17,7 @@ sudo apt install libsuitesparse-dev libcxsparse3 libgflags-dev libgoogle-glog-de
 ```
 Then, you need to download the source code:
 ```
-cd ~/Download
+cd ~/Downloads
 git clone https://github.com/ceres-solver/ceres-solver.git
 ```
 Afer that, enter the coresponding folder "ceres-solver" and choose the version 1.14.0.
@@ -41,7 +41,7 @@ So far, ceres is installed on your computer.
 #nlopt
 In this part, firstly we still need to down load the souce code:
 ```
-cd ~/Download
+cd ~/Downloads
 git clone --depth 1 --branch v2.5.0 https://github.com/stevengj/nlopt.git
 ```
 Then you can install nlopt by doing the follow steps:
@@ -55,7 +55,28 @@ sudo make install
 ```
 
 # snopt
-Download:
+Install independencies:
+```
+sudo apt-get -qq install autoconf autogen gfortran
+```
+Down load source code:
+```
+cd ~/Downloads
+git clone https://github.com/snopt/snopt-interface.git
+```
+Choose the old vision:
+```
+cd snopt-interface
+git reset --hard 76b166ecdf5c55a3289ce0f849d8d3d101954a22
+```
+Install step by step:
+```
+./autogen.sh
+./configure prefix="/usr/local"
+sudo make install
+cd include
+sudo mkdir -p /usr/local/include/snopt && sudo cp -rf * /usr/local/include/snopt
+```
 
 
 
