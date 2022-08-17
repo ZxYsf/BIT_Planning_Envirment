@@ -91,12 +91,10 @@ sudo apt-get -y install gfortran cmake build-essential gcc g++
 Download the source code for the specified version:
 ```
 cd ~/Downloads
-#git clone https://git.coding.net/aRagdoll/Ipopt-3.12.4.git
 git clone --branch releases/3.12.4 --depth=1 https://github.com/coin-or/Ipopt.git
 ```
 Install ipopt:
 ```
-#cd Ipopt-3.12.4
 cd Ipopt
 ./configure --prefix /usr/local
 make -j8
@@ -121,7 +119,7 @@ Extract files and install cppad:
 tar -xf cppad-20180000.0.gpl.tgz
 cd cppad-20180000.0 && mkdir build && cd build
 cmake ..
-sudo make instal
+sudo make install
 ```
 
 ## libcpp
@@ -131,10 +129,11 @@ sudo apt-get -y install liboctomap-dev cmake build-essential gcc g++ libboost-al
 ```
 Install libcpp:
 ```
+cd ~/Downloads
 git clone --branch v2.0 https://github.com/danfis/libccd.git
 cd libccd
 mkdir build && cd build
-cmake -G "Unix Makefiles" -DBUILD_SHARED_LIBS=ON -DENABLE_DOUBLE_PRECISION=ON .. > /dev/null
+cmake ..
 make && sudo make install
 ```
 
@@ -154,7 +153,11 @@ sudo apt-get install libgeographic-dev
 sudo apt-get install libgtest-dev
 ```
 
+## param-handler
+```
+sudo apt-get install ros-melodic-rosparam-handler
 
+```
 
 
 
