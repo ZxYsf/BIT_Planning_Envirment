@@ -54,8 +54,9 @@ make -j8
 sudo make install
 ```
 
-#snopt
-This part may prone to problems, please install it step by step.
+# snopt
+Download:
+
 
 
 
