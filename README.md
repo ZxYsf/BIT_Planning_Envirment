@@ -3,14 +3,15 @@ This repository is created to help the future student at Intelligent Vehicle Res
 
 If you follow me step by step, you can compile the program "hmpl" from Dr YuZhang successfully. Some of you may still have many problems when do these settings and my suggestion is to ask the senior schoolmates around, who will always be glad to help you solve problems. After that, if you still have trouble with running the project "hmpl", you can contract me by wechat: zx1120183609.
 
-# Start
+# BEFORE START
 Above all, you need to install UBUNTU18.04 on your computer and install servel necessary tool like `cmake`, `g++`, `git`. You can just use `sudo apt-get install XXX` to configure the basic tools.
 
 Then we need to install serval libraries to our linux environment, e.g. ceres, nlopt, snopt, ipopt, cppad, libcpp, grid map, geographic, gtest and others. Now I'm going to show you how to install them all. In this tutorial I will download all the source code in `~/Downloads`, you can unload it after the whole installation procedure.
 
 Most the sources code is given in this repository, but I recommend you to down load it on the official website or `git clone` them from their original repository. Please try to follow my step exactly by `git clone`, and if you have trouble with you internet, you can obtain the source code by other ways.
 
-# ceres
+# START
+## ceres
 Firstly, you need to install dependencies of ceres:
 ```
 sudo apt install libsuitesparse-dev libcxsparse3 libgflags-dev libgoogle-glog-dev libgtest-dev
@@ -34,7 +35,7 @@ Illustration: for the code above `make -j8`, 8 is the thread of your CPU. You ca
 
 So far, ceres is installed on your computer.
 
-# nlopt
+## nlopt
 In this part, firstly we still need to download the souce code:
 ```
 cd ~/Downloads
@@ -50,7 +51,7 @@ make -j8
 sudo make install
 ```
 
-# snopt
+## snopt
 Install independencies:
 ```
 sudo apt-get install autoconf autogen gfortran libgfortran3
@@ -82,7 +83,7 @@ cd include
 sudo mkdir -p /usr/local/include/snopt && sudo cp -rf * /usr/local/include/snopt
 ```
 
-# ipopt
+## ipopt
 Install independencies:
 ```
 sudo apt-get -y install gfortran cmake build-essential gcc g++
@@ -107,7 +108,7 @@ sudo ldconfig
 source $HOME/.bashrc
 ```
 
-# cppad
+## cppad
 Download the source code for the specified version:
 ```
 cd ~/Downloads
@@ -121,7 +122,7 @@ cmake ..
 sudo make instal
 ```
 
-# libcpp
+## libcpp
 Install independencies:
 ```
 sudo apt-get -y install liboctomap-dev cmake build-essential gcc g++ libboost-all-dev libeigen3-dev
@@ -135,18 +136,18 @@ cmake -G "Unix Makefiles" -DBUILD_SHARED_LIBS=ON -DENABLE_DOUBLE_PRECISION=ON ..
 make && sudo make install
 ```
 
-# grid_map
+## grid_map
 Just enter one line of code:
 ```
 sudo apt-get install ros-melodic-pcl-ros ros-melodic-costmap-2d ros-melodic-grid-map
 ```
 
-# geographic
+## geographic
 ```
 sudo apt-get install libgeographic-dev
 ```
 
-# gtest
+## gtest
 ```
 sudo apt-get install libgtest-dev
 ```
