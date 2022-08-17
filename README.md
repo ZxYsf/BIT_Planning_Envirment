@@ -18,15 +18,11 @@ sudo apt install libsuitesparse-dev libcxsparse3 libgflags-dev libgoogle-glog-de
 Then, you need to download the source code:
 ```
 cd ~/Downloads
-git clone https://github.com/ceres-solver/ceres-solver.git
+git clone --branch 1.14.0 --depth=1 https://github.com/ceres-solver/ceres-solver.git
 ```
-Afer that, enter the coresponding folder "ceres-solver" and choose the version 1.14.0.
+Afer that, execute the following code in turn to compile and install ceres:
 ```
 cd ceres-solver
-git checkout -b 11.4.0
-```
-Then, execute the following code in turn to compile and install ceres:
-```
 mkdir build
 cd build
 cmake ..        
@@ -38,8 +34,8 @@ Illustration: for the code above `make -j8`, 8 is the thread of your CPU. You ca
 
 So far, ceres is installed on your computer.
 
-#nlopt
-In this part, firstly we still need to down load the souce code:
+# nlopt
+In this part, firstly we still need to download the souce code:
 ```
 cd ~/Downloads
 git clone --depth 1 --branch v2.5.0 https://github.com/stevengj/nlopt.git
@@ -57,9 +53,17 @@ sudo make install
 # snopt
 Install independencies:
 ```
-sudo apt-get -qq install autoconf autogen gfortran
+sudo apt-get install autoconf autogen gfortran libgfortran3
 ```
-Down load source code:
+Firstly, down load the snopt_binary-master and copy some files to your system. Just input the follow code in sequence:
+```
+cd ~/Downloads
+git clone -b snopt_binary --single-branch https://github.com/ZxYsf/BIT_Planning_Envirment.git
+cd BIT_Planning_Envirment/snopt_binary-master/lib/
+sudo cp -rf * /usr/local/lib
+cd .. && sudo cp -rf snopt.pc /usr/local/lib/pkgconfig
+```
+After that we can download the source code:
 ```
 cd ~/Downloads
 git clone https://github.com/snopt/snopt-interface.git
@@ -78,11 +82,74 @@ cd include
 sudo mkdir -p /usr/local/include/snopt && sudo cp -rf * /usr/local/include/snopt
 ```
 
+# ipopt
+Install independencies:
+```
+sudo apt-get -y install gfortran cmake build-essential gcc g++
+```
+Download the source code for the specified version:
+```
+cd ~/Downloads
+git clone https://git.coding.net/aRagdoll/Ipopt-3.12.4.git
+```
+Install ipopt:
+```
+cd Ipopt-3.12.4
+./configure --prefix /usr/local
+make -j8
+make test
+sudo make install
+```
+Set the environment variable:
+```
+echo 'export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH' >> $HOME/.bashrc
+sudo ldconfig
+source $HOME/.bashrc
+```
 
+# cppad
+Download the source code for the specified version:
+```
+cd ~/Downloads
+wget http://www.coin-or.org/download/source/CppAD/cppad-20180000.0.gpl.tgz
+```
+Extract files and install cppad:
+```
+tar -xf cppad-20180000.0.gpl.tgz
+cd cppad-20180000.0 && mkdir build && cd build
+cmake ..
+sudo make instal
+```
 
+# libcpp
+Install independencies:
+```
+sudo apt-get -y install liboctomap-dev cmake build-essential gcc g++ libboost-all-dev libeigen3-dev
+```
+Install libcpp:
+```
+git clone --branch v2.0 https://github.com/danfis/libccd.git
+cd libccd
+mkdir build && cd build
+cmake -G "Unix Makefiles" -DBUILD_SHARED_LIBS=ON -DENABLE_DOUBLE_PRECISION=ON .. > /dev/null
+make && sudo make install
+```
 
+# grid_map
+Just enter one line of code:
+```
+sudo apt-get install ros-melodic-pcl-ros ros-melodic-costmap-2d ros-melodic-grid-map
+```
 
+# geographic
+```
+sudo apt-get install libgeographic-dev
+```
 
+# gtest
+```
+sudo apt-get install libgtest-dev
+```
 
 
 
