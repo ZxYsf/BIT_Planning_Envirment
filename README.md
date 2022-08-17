@@ -91,11 +91,13 @@ sudo apt-get -y install gfortran cmake build-essential gcc g++
 Download the source code for the specified version:
 ```
 cd ~/Downloads
-git clone https://git.coding.net/aRagdoll/Ipopt-3.12.4.git
+#git clone https://git.coding.net/aRagdoll/Ipopt-3.12.4.git
+git clone --branch releases/3.12.4 --depth=1 https://github.com/coin-or/Ipopt.git
 ```
 Install ipopt:
 ```
-cd Ipopt-3.12.4
+#cd Ipopt-3.12.4
+cd Ipopt
 ./configure --prefix /usr/local
 make -j8
 make test
