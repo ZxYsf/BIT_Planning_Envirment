@@ -1,0 +1,7 @@
+prefix=/usr/local
+
+Name: SNOPT_CPP
+Description: SNOPT C++ bindings
+Version: 7.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lsnopt7_cpp -lsnopt7 -lm
