@@ -1,18 +1,22 @@
 # 1 BIT_Planning_Envirment
-This repository is created to help the future student at Intelligent Vehicle Research Center of BIT to configure the environment of path planning.
+This repository is created mainly to help the future student at Intelligent Vehicle Research Center of BIT to configure the environment of path planning. 
+
+More than that, I think this tutorial will also help you a lot to install servel optimizers or packages on your computer.
 
 If you follow me step by step, you can compile the program "hmpl" from Dr YuZhang successfully. Some of you may still have many problems when do these settings and my suggestion is to ask the senior schoolmates around, who will always be glad to help you solve problems. After that, if you still have trouble with running the project "hmpl", you can contract me by wechat: zx1120183609.
 
-# 2 BEFORE START
+# 2 BEFORE YOU START
 Above all, you need to install UBUNTU18.04 and ROS on your computer. After that tools like `cmake`, `g++`, `git` is also necessary. You can just use `sudo apt-get install XXX` to configure the basic tools.
 
-Then we need to install serval libraries to our linux environment, e.g. ceres, nlopt, snopt, ipopt, cppad, libcpp, grid map, geographic, gtest and others. Now I'm going to show you how to install them all. In this tutorial I will download all the source code in `~/Downloads`, you can unload it after the whole installation procedure.
+After that we need to install serval libraries to our linux environment, e.g. ceres, nlopt, snopt, ipopt, cppad, libcpp, grid map, geographic, gtest and others. Now I'm going to show you how to install them all. 
 
 Most the sources code is given in this repository, but I recommend you to down load it on the official website or `git clone` them from their original repository. Please try to follow my step exactly by `git clone`, and if you have trouble with you internet, you can obtain the source code by other ways.
 
+In this tutorial I will download all the source code in `~/Downloads`, you can unload it after the whole installation procedure.
+
 # 3 START
 ### 3.1 ceres
-Firstly, you need to install dependencies of ceres:
+Firstly, you need to install the dependencies of ceres:
 ```
 sudo apt install libsuitesparse-dev libcxsparse3 libgflags-dev libgoogle-glog-dev libgtest-dev
 ```
@@ -160,5 +164,7 @@ sudo apt-get install ros-melodic-rosparam-handler
 
 # 4 End
 After all the operations above, you can go to the file `hmpl` written by Dr YuZhang and execute `catkin_make`. I think that if you don't ignore any of the above operations, you can build this project.
+
+Maybe you still have problems like *can't find XXXXConfig.cmake* when `catkin_make` the `hmpl`, it's because that the filefolder *cmake* in package *opt-solver* is not in the correct path. Copy that *cmake* folder under the *src* folder, then you can solve the problem.
 
 
