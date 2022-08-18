@@ -10,7 +10,7 @@ Then we need to install serval libraries to our linux environment, e.g. ceres, n
 
 Most the sources code is given in this repository, but I recommend you to down load it on the official website or `git clone` them from their original repository. Please try to follow my step exactly by `git clone`, and if you have trouble with you internet, you can obtain the source code by other ways.
 
-# 3.START
+# 3 START
 ### 3.1 ceres
 Firstly, you need to install dependencies of ceres:
 ```
@@ -83,7 +83,7 @@ cd include
 sudo mkdir -p /usr/local/include/snopt && sudo cp -rf * /usr/local/include/snopt
 ```
 
-#### 3.4 ipopt
+### 3.4 ipopt
 Install independencies:
 ```
 sudo apt-get -y install gfortran cmake build-essential gcc g++
