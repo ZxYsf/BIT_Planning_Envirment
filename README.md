@@ -1,17 +1,17 @@
-# BIT_Planning_Envirment
+# 1 BIT_Planning_Envirment
 This repository is created to help the future student at Intelligent Vehicle Research Center of BIT to configure the environment of path planning.
 
 If you follow me step by step, you can compile the program "hmpl" from Dr YuZhang successfully. Some of you may still have many problems when do these settings and my suggestion is to ask the senior schoolmates around, who will always be glad to help you solve problems. After that, if you still have trouble with running the project "hmpl", you can contract me by wechat: zx1120183609.
 
-# BEFORE START
+# 2 BEFORE START
 Above all, you need to install UBUNTU18.04 on your computer and install servel necessary tool like `cmake`, `g++`, `git`. You can just use `sudo apt-get install XXX` to configure the basic tools.
 
 Then we need to install serval libraries to our linux environment, e.g. ceres, nlopt, snopt, ipopt, cppad, libcpp, grid map, geographic, gtest and others. Now I'm going to show you how to install them all. In this tutorial I will download all the source code in `~/Downloads`, you can unload it after the whole installation procedure.
 
 Most the sources code is given in this repository, but I recommend you to down load it on the official website or `git clone` them from their original repository. Please try to follow my step exactly by `git clone`, and if you have trouble with you internet, you can obtain the source code by other ways.
 
-# START
-### ceres
+# 3.START
+### 3.1 ceres
 Firstly, you need to install dependencies of ceres:
 ```
 sudo apt install libsuitesparse-dev libcxsparse3 libgflags-dev libgoogle-glog-dev libgtest-dev
@@ -35,7 +35,7 @@ Illustration: for the code above `make -j8`, 8 is the thread of your CPU. You ca
 
 So far, ceres is installed on your computer.
 
-### nlopt
+### 3.2 nlopt
 In this part, firstly we still need to download the souce code:
 ```
 cd ~/Downloads
@@ -51,7 +51,7 @@ make -j8
 sudo make install
 ```
 
-### snopt
+### 3.3 snopt
 Install independencies:
 ```
 sudo apt-get install autoconf autogen gfortran libgfortran3
@@ -83,7 +83,7 @@ cd include
 sudo mkdir -p /usr/local/include/snopt && sudo cp -rf * /usr/local/include/snopt
 ```
 
-#### ipopt
+#### 3.4 ipopt
 Install independencies:
 ```
 sudo apt-get -y install gfortran cmake build-essential gcc g++
@@ -108,7 +108,7 @@ sudo ldconfig
 source $HOME/.bashrc
 ```
 
-### cppad
+### 3.5 cppad
 Download the source code for the specified version:
 ```
 cd ~/Downloads
@@ -122,7 +122,7 @@ cmake ..
 sudo make install
 ```
 
-### libcpp
+### 3.6 libcpp
 Install independencies:
 ```
 sudo apt-get -y install liboctomap-dev cmake build-essential gcc g++ libboost-all-dev libeigen3-dev
@@ -137,28 +137,28 @@ cmake ..
 make && sudo make install
 ```
 
-### grid_map
+### 3.7 grid_map
 Just enter one line of code:
 ```
 sudo apt-get install ros-melodic-pcl-ros ros-melodic-costmap-2d ros-melodic-grid-map
 ```
 
-### geographic
+### 3.8 geographic
 ```
 sudo apt-get install libgeographic-dev
 ```
 
-### gtest
+### 3.9 gtest
 ```
 sudo apt-get install libgtest-dev
 ```
 
-### param-handler
+### 3.10 param-handler
 ```
 sudo apt-get install ros-melodic-rosparam-handler
 ```
 
-# End
+# 4 End
 After all the operations above, you can go to the file `hmpl` written by Dr YuZhang and execute `catkin_make`. I think that if you don't ignore any of the above operations, you can build this project.
 
 
