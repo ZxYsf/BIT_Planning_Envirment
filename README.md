@@ -5,7 +5,7 @@ More than that, I think this tutorial will also help you a lot to install servel
 
 If you follow me step by step, you can compile the program "hmpl" from Dr YuZhang successfully. Some of you may still have many problems when do these settings and my suggestion is to ask the senior schoolmates around, who will always be glad to help you solve problems. After that, if you still have trouble with running the project "hmpl", you can contract me by wechat: zx1120183609.
 
-***Declaration:** All uploaded compressed package are from its official website, which are listed here for the convenience of downloading. I do not have the ownership, if there is infringement, please contact to delete.*
+***Declaration:** All uploaded compressed package are from its official website and listed here for the convenience of downloading. I do not have the ownership, if there is infringement, please contact to delete.*
 
 # 2 BEFORE YOU START
 Above all, you need to install UBUNTU18.04 and ROS on your computer. After that tools like `cmake`, `g++`, `git` is also necessary. You can just use `sudo apt-get install XXX` to configure the basic tools.
